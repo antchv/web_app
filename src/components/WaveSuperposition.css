@@ -1,0 +1,178 @@
+/* Conteneur principal */
+.wave-superposition-container {
+  max-width: flex; /* Largeur maximale */
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Titre principal */
+.wave-superposition-container h1 {
+  font-size: 2rem;
+  color: #0056b3;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Disposition principale */
+.wave-superposition-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Permet de passer en ligne sur petits écrans */
+}
+
+/* Section de la simulation */
+.simulation-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Zone des inputs */
+.wave-input-container {
+  display: flex;
+  flex-wrap: wrap; /* Rend responsive pour petits écrans */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  width: 100%; /* S'adapte à la largeur */
+}
+
+.wave-input-container label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.wave-input-container input,
+.wave-input-container select {
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  width: 90%; /* Ajuste la largeur des inputs et du menu déroulant */
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de survol et focus */
+.wave-input-container input:focus,
+.wave-input-container select:focus,
+.wave-input-container input:hover,
+.wave-input-container select:hover {
+  border-color: #0056b3; /* Bordure bleue */
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Ombre bleue */
+  outline: none;
+}
+
+/* Style spécifique pour le menu déroulant */
+.wave-input-container select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%230056b3" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 12px;
+}
+
+/* Zone du canvas */
+.canvas-container {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Section des descriptions */
+.description-section {
+  flex: 2; /* Prend 2 parts de l'espace disponible */
+  min-width: 35%; /* Assure une largeur minimale pour la zone d'explications */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-section h2 {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.description-section p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.description-section ul {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .wave-superposition-layout {
+    flex-wrap: wrap; /* Les éléments passent en ligne */
+  }
+
+  .simulation-section,
+  .description-section {
+    flex: 1; /* Chaque section prend toute la largeur */
+    width: 100%;
+    margin-bottom: 20px; /* Espacement entre les sections */
+  }
+}
+
+@media (max-width: 768px) {
+  .wave-input-container {
+    flex-direction: column; /* Les inputs passent en colonne */
+    align-items: stretch; /* Occupe toute la largeur */
+  }
+
+  .wave-input-container label {
+    width: auto; /* Ajuste la largeur automatiquement */
+  }
+
+  .wave-input-container input,
+  .wave-input-container select {
+    width: 100%; /* Les inputs prennent toute la largeur de leur parent */
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-superposition-container {
+    padding: 15px;
+  }
+
+  .wave-superposition-container h1 {
+    font-size: 1.5rem; /* Taille réduite du titre */
+  }
+
+  .description-section h2 {
+    font-size: 1.2rem; /* Taille réduite du titre de la section description */
+  }
+
+  .description-section p {
+    font-size: 0.9rem; /* Texte légèrement plus petit */
+  }
+}

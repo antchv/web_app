@@ -1,0 +1,100 @@
+/* Conteneur principal de la barre */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1e293b; /* Couleur sombre pour un look professionnel */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .sidebar nav ul li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: #cbd5e1; /* Couleur claire pour les liens */
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar nav ul li a:hover {
+    background-color: #3b82f6; /* Couleur de hover */
+    color: white;
+    transform: translateX(5px);
+  }
+  
+  .sidebar nav ul li a.active-link {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Style des icônes */
+  .sidebar nav ul li a .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Style pour les écrans mobiles */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+      padding: 15px 10px;
+    }
+  
+    .sidebar h2 {
+      font-size: 1.2rem;
+    }
+  
+    .sidebar nav ul li a {
+      font-size: 1rem;
+    }
+  }
+  
+/* Style pour le titre "Simulations" avec lien */
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .sidebar h2 a.title-link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+  
+  .sidebar h2 a.title-link:hover {
+    color: #ffdd57; /* Couleur sur hover */
+  }
+  
